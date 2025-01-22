@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
-import { Outfit } from "next/font/google"
+import { Outfit } from "next/font/google";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -17,9 +17,8 @@ import { Outfit } from "next/font/google"
 const outFit = Outfit({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-outFit"
+  variable: "--font-outFit",
 });
-
 
 export const metadata: Metadata = {
   title: "Ancientech Academy",
@@ -33,11 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${outFit.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${outFit.variable} antialiased`}>{children}</body>
     </html>
   );
 }
